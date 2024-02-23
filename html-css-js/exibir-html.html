@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .tudo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+	row-gap: 30px;
+    }
+    </style>
+</head>
+<body>
+    <div class="tudo">
+        <div>
+            <textarea cols="30" rows="5" wrap="hard" style="height: 500px; width: 100%;" id="id1"></textarea> <br>
+            <input type="button" value="Exibir" id="id2">
+        </div>
+        <div>
+            <div id="id3"></div>
+        </div>
+    </div>
+    <script>
+        let a = window.document.getElementById('id1')
+        let b = window.document.getElementById('id2')
+        let c = window.document.getElementById('id3')
+        b.addEventListener('click', clique)
+        function clique() {
+            c.innerHTML = a.value
+       }
+    </script>
+</body>
+</html>
